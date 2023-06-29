@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Web_Project_ASP.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>Admin Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        /*.row.content {
+            height: 1500px
+        }*/
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        li:hover{
+            background-color:blue;
+            cursor:pointer;
+            
+        }
+         li:active{
+            background-color:rebeccapurple;
+            padding:8px;
+            
+            
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container-fluid">
+                <div class="row content">
+                    <div class="col-sm-3 sidenav">
+                        <h4>Admin Dashboard</h4>
+                        <ul class="nav nav-pills nav-stacked">
+                            
+                            <li> <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/AddCategory.aspx">Category</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/AddItem.aspx">Product</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink3" runat="server">Quantity</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink4" runat="server">Order</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink5" runat="server">View Payment</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink1" runat="server">Reports</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink7" runat="server">Change password</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink8" runat="server">Feedback</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink9" runat="server">Logout</asp:HyperLink></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="col-sm-9">
+                        <div class="jumbotron text-center" style="margin-bottom: 0; background-color: antiquewhite; height: 250px">
+                            <h3 >Jesi's Mobile Shop</h3>
+                            <img src="../Images/logo.png" width="160px" height="160px" />
+                            
+                        </div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+            <footer class="container-fluid">
+                <p>Footer</p>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>
